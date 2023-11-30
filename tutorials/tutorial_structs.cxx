@@ -1,4 +1,6 @@
+// Structs are by default public. One can add private members. 
 #include <iostream>
+#include "tutorial_point2d_classes.h"
 struct Point2DStruct {
     double x,y;
 };
@@ -14,8 +16,17 @@ void struct_demo() {
     std::cout << " 2D Point (struct) q(" << q.x << ", " << q.y << ")\n";
 }
 
+void classes_demo(){
+    Point2DSphericalClass p;
+    p.setXY(2.0, 3.0);
+    std::cout << " Spherical point (class) p(x=" << p.getX() 
+              << ", y=" << p.getY() << ")\n";
+    std::cout << " Spherical point (class) p(r=" << p.getR() 
+              << ", phi=" << p.getPhi() << ")\n";
+}
 
 int main(int argc, char** argv) {
     struct_demo();
+    classes_demo();
     return 0;
 }

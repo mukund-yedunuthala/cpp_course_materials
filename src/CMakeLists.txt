@@ -1,1 +1,2 @@
 add_library(MySqrt tutorial_custom_headers.cxx)
+add_library(Point2DSpherical tutorial_point2d_classes.cxx)
